@@ -1,1 +1,16 @@
+  rsync -avzP index.txt my-ca.crt root@backupdirectoryserver.rajghatbesantschool.org:/etc/pki/CA/
+ [root@masterdirectoryserver CA]# rsync -avzP private/my-ca.key root@backupdirectoryserver.rajghatbesantschool.org:/etc/pki/CA/private/
+ [root@masterdirectoryserver CA]# rsync -avzP serial root@backupdirectoryserver.rajghatbesantschool.org:/etc/pki/CA/
+ 
+ 
+ 
+ Remove 389-DS Command
+ [root@centos62 ~]# remove-ds-admin.pl -y -f
+[root@centos62 ~]# yum remove 389-ds-base-libs 389-adminutil idm-console-framework -y
+[root@centos62 ~]# rm -rf /etc/dirsrv /usr/lib*/dirsrv /var/*/dirsrv /etc/sysconfig/dirsrv*
+reboot -f
+
+
+
+
 
